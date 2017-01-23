@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/luAr26/angular2-skeleton"
+    "url": "https://github.com/luAr26/task-card-app"
   },
   "dependencies": {
     "@angular/common": "2.1.2",
