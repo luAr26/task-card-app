@@ -1,1 +1,25 @@
-<h1>Angular2 skeleton</h1>
+<div class="container">
+  <div class="row form-container">
+    <div class="col-md-12">
+      <div class="col-md-6 offset-md-3">
+        <form class="form-inline" (ngSubmit)="addTask()" #taskForm="ngForm">
+          <div class="form-group">
+            <label for="content-field" class="sr-only"></label>
+            <input type="text" class="form-control" required placeholder="Enter a task..." [(ngModel)]="currentTask.content" name="content">
+          </div>
+          <button type="submit" class="btn btn-primary" [disabled]="!taskForm.valid"><i class="fa fa-plus"></i> Add task</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="row no-tasks" *ngIf="tasks.length === 0">
+    <div class="col-md-12">
+      <h5>Task list is empty</h5>
+      <p>Add new task using the form above.</p>
+    </div>
+  </div>
+  <div class="row">
+    <app-card *ngFor="let task of tasks" [task]="task"></app-card>
+  </div>
+</div>
+
