@@ -1,1 +1,1 @@
-# Angular 2 starter project with Bootstrap 4
+# Angular 2 task card app

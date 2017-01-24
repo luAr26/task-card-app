@@ -14,4 +14,9 @@ export class CardComponent {
   statusToggle() {
     this.task.completed = !this.task.completed;
   }
+
+  onSoftDelete(e) {
+    e.stopPropagation();
+    this.task.softDelete = true;
+  }
 }

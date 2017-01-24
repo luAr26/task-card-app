@@ -16,6 +16,10 @@ var CardComponent = (function () {
     CardComponent.prototype.statusToggle = function () {
         this.task.completed = !this.task.completed;
     };
+    CardComponent.prototype.onSoftDelete = function (e) {
+        e.stopPropagation();
+        this.task.softDelete = true;
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', task_1.Task)
